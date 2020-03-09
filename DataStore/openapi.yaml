@@ -1,0 +1,129 @@
+swagger: '2.0'
+info:
+  description: This is a simple API
+  version: 1.0.0
+  title: Simple Inventory API
+
+paths:
+  /coffee/region:
+    get:
+      summary: gets region
+      operationId: app.getRegion
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        name: searchStringstart
+        required: true
+        type: string
+        format: date-time
+      - in: query
+        name: searchStringend
+        required: true
+        type: string
+        format: date-time
+      responses:
+       200:
+        description: returned regions
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Region'
+
+    # post:
+    #   summary: adds regions
+    #   operationId: app.addRegion
+    #   description: |
+    #     By passing in the appropriate options, you can add regions.
+    #   consumes:
+    #   - application/json
+    #   produces:
+    #   - application/json
+    #   parameters:
+    #   - in: body
+    #     name: cofRegion
+    #     description: storesCoffeeRegion
+    #     schema:
+    #       $ref: '#/definitions/Region'
+    #   responses:
+    #     201:
+    #       description: Region added
+    #     400:
+    #       description: Invalid input, object invalid
+
+  /coffee/roast:
+    get:
+        summary: gets roast
+        operationId: app.getRoast
+        produces:
+        - application/json
+        parameters:
+        - in: query
+          name: searchStringstart
+          required: true
+          type: string
+          format: date-time
+        - in: query
+          name: searchStringend
+          required: true
+          type: string
+          format: date-time
+        responses:
+         200:
+          description: returns roasts
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Roasts'
+    # post:
+    #   summary: adds roasts
+    #   operationId: app.addRoast
+    #   description: Stores a roast
+    #   consumes:
+    #   - application/json
+    #   produces:
+    #   - application/json
+    #   parameters:
+    #   - in: body
+    #     name: roastType
+    #     description: roast type
+    #     schema:
+    #       $ref: '#/definitions/Roasts'
+    #   responses:
+    #     201:
+    #       description: roast added
+    #     400:
+    #       description: Invalid Input
+
+definitions:
+  Region:
+    type: object
+    required:
+    - id
+    - name
+    properties:
+      id:
+        type: string
+        format: uuid
+        example: d290f1ee-6c54-4b54-4b01-90e6-d701748f0851
+      name:
+        type: string
+        example: Ethiopia
+
+  Roasts:
+    type: object
+    required:
+    - id
+    - name
+    - region
+    properties:
+      id:
+        type: string
+        format: uuid
+        example: d290f1ee-6c54-4b01-90e6-d701748f0851
+      name:
+        type: string
+        example: fdhsajkl
+      region:
+        type: string
+        example: ethiopia

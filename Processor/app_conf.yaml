@@ -1,0 +1,7 @@
+version: 1
+datastore:
+  filename: data.json
+scheduler:
+  period_sec: 5
+event_store:
+  url: http://localhost:8090/coffee

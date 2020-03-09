@@ -1,0 +1,39 @@
+swagger: '2.0'
+info:
+  description: This is a simple API
+  version: 1.0.0
+  title: Event Stats
+
+paths:
+  /events/stats:
+    get:
+      summary: gets event stats for coffee
+      operationId: app.get_stats
+      description: Gets stats
+      produces:
+      - application/json
+      responses:
+        200:
+          description: current stats
+          schema:
+            $ref: '#/definitions/Stats'
+        404:
+          description: Stats do not exist
+definitions:
+  Stats:
+    type: object
+    required:
+    - num_regions
+    - num_roasts
+    - updated_timestamp
+    properties:
+      num_regions:
+        type: integer
+        example: 10
+      num_roasts:
+        type: integer
+        example: 12
+      updated_timestamp:
+        type: string
+        format: date-time
+        example: 2020-01-23T09:12:33:001Z

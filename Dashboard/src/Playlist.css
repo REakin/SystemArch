@@ -1,0 +1,27 @@
+.song {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.good {
+    color: goldenrod;
+}
+
+.bad {
+    color: tomato;
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.playlist {
+    max-width: 500px;
+    margin: auto;
+}
+
+.playlist_heading{
+    text-align: center;
+}
