@@ -2,10 +2,10 @@ version: 1
 datastore:
   user: root
   password: password
-  hostname: ec2-34-219-64-10.us-west-2.compute.amazonaws.com
+  hostname: ec2-34-217-31-119.us-west-2.compute.amazonaws.com
   port: 3306
   db: servicearch
 kafkastore:
-  host: ec2-34-219-64-10.us-west-2.compute.amazonaws.com
+  host: ec2-34-217-31-119.us-west-2.compute.amazonaws.com
   port: 9092
 topic: events

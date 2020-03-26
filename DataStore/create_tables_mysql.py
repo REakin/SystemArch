@@ -1,6 +1,6 @@
 import mysql.connector
 
-conn = mysql.connector.connect(host="localhost", user="root",
+conn = mysql.connector.connect(host="ec2-34-219-64-10.us-west-2.compute.amazonaws.com", user="root",
 password="Password", database="servicearch")
 
 c = conn.cursor()
