@@ -28,3 +28,4 @@ yarn-error.log*
 .vscode
 Dashboard/node_modules/
 *\.idea
+Services.pem
