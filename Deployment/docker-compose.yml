@@ -50,7 +50,7 @@ services:
     depends_on:
       - 'kafka'
     volumes:
-      - ./configs/event-receiver:/config
+      - ./configs/EventReceiver:/config
   data-store:
     image: data-store
     ports:
@@ -59,7 +59,7 @@ services:
       - 'kafka'
       - 'db'
     volumes:
-      - ./configs/data-store:/config
+      - ./configs/DataStore:/config
   processor:
     image: processor
     ports:
@@ -67,7 +67,7 @@ services:
     depends_on:
       - 'db'
     volumes:
-      - ./configs/processor:/config
+      - ./configs/Processor:/config
   audit-log:
     image: audit-log
     ports:
@@ -75,4 +75,6 @@ services:
     depends_on:
       - 'kafka'
     volumes:
-      - ./configs/audit-log:/config
+      - ./configs/AuditLog:/config
+  volumes:
+    my-db:
