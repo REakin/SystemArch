@@ -4,4 +4,4 @@ datastore:
 scheduler:
   period_sec: 5
 event_store:
-  url: http://ec2-54-149-203-220.us-west-2.compute.amazonaws.com:8090/coffee
+  url: http://ec2-54-203-50-147.us-west-2.compute.amazonaws.com:8090/coffee
