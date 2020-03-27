@@ -21,6 +21,6 @@ loggers:
 root:
   level: DEBUG
   handlers: [console]
-kafka-server: 'localhost'
+kafka-server: 'ec2-54-149-203-220.us-west-2.compute.amazonaws.com'
 kafka-port: 9092
 topic: 'events'
